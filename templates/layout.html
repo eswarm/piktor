@@ -13,13 +13,17 @@
     <link rel="canonical" >
     <!-- Custom CSS -->
 
+    <link rel="stylesheet" href="{{ '/static/gen/styles.css'|asseturl }}">
+    <!--
     <link rel="stylesheet" href="{{ '/static/pixyll.css'|url }}" type="text/css">
+    -->
+    <script type=text/javascript src="{{ '/static/gen/app.js'|asseturl }}" charset="utf-8"></script>
     <link rel="stylesheet" href="{{ get_pygments_stylesheet()|url }}">
     <!-- Fonts -->
     <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Lato:900,300&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
 
-      <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- MathJax -->
     <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -43,27 +47,9 @@
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-
-    <script type="text/javascript">
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-       ga('create', '{{ site.google_analytics }}', 'auto');
-       ga('send', 'pageview');
-    </script>
 </head>
 
 <body class="site{% if site.animated %} animated fade-in-down{% endif %}">
-  <noscript><iframe src="//www.googletagmanager.com/ns.html?id={{ site.google_tag_manager }}"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','{{ site.google_tag_manager }}');</script>
-
-
   <div class="site-wrap">
       <header class="site-header px2 px-responsive">
         <div class="mt2 wrap">
@@ -71,7 +57,7 @@
             <a href="{{ site.url }}" class="site-title">{{ site.title }}</a>
             <nav class="site-nav">
                   {% if this._path == '/' %} {% endif
-                    %}<a href="{{ '/'|url }}">Welcome</a>
+                    %}<a href="{{ '/'|url }}">Home</a>
                   {% for href, title in [
                     ['/blog', 'Blog'],
                     ['/projects', 'Projects'],
@@ -99,10 +85,9 @@
   <footer class="center">
     <div class="measure">
       <small>
-          &copy; Copyright 2016 by Eswar Malla .
-
-        Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
-        &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+          &copy; Copyright 2016 by Eswar Malla.
+        Theme <a href="https://github.com/johnotander/pixyll">Piktor</a>, fork of <a href="https://github.com/johnotander/pixyll">Pixyll</a> &lt;3 by <a href="http://johnotander.com">John Otander</a> 
+        &lt;/&gt; available on .
       </small>
     </div>
   </footer>
@@ -112,5 +97,6 @@
       anchors.options.visible = 'always';
       anchors.add('article h2, article h3, article h4, article h5, article h6');
   </script>{% endif %}
+  <div class="ga-script">{{ generate_google_analytics() }}</div>
 </body>
 </html>
