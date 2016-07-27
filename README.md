@@ -3,7 +3,7 @@ A Lektor theme based on Pixyll
 
 A simple and elegant theme for using with [Lektor](http://getlektor.com/). 
 
-![Screen](/screens/post.png?raw=true "Screenshot")
+![Screen](/screens/screen.png?raw=true "Screenshot")
 
 Please follow the steps on [installation here.](https://www.getlektor.com/docs/installation/) 
 
