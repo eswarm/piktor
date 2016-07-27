@@ -1,8 +1,10 @@
-title: ttttt
+title: Markdown Test
 ---
-author: rett
+pub_date: 2016-07-16
 ---
-body: boomboom
+author: Eswar Malla
+---
+body:
 
 There is a significant amount of subtle, yet precisely calibrated, styling to ensure
 that your content is emphasized while still looking aesthetically pleasing.
