@@ -5,7 +5,8 @@
   {% else %}
     <h1>{{ post.title }}</h1>
   {% endif %}
-  <span class="post-meta">
+  <p class="post-meta">
+    <!--
     written by
     {% if post.twitter_handle %}
       <a href="https://twitter.com/{{ post.twitter_handle
@@ -13,10 +14,16 @@
     {% else %}
       {{ post.author }}
     {% endif %}
-    on {{ post.pub_date }}
-    </span>
+    -->
+    <time class="dt-published" datetime="{{ post.pub_date }}">{{ post.pub_date.strftime("%b %d, %Y")}}</time>
+  </p>
   </div>
   <article class="post-content">
+    {% if from_index %}
+      {{ post.body|excerpt }}
+      <a class="post-link" href="{{ post|url }}">Read more...</a>
+    {% else %}
       {{ post.body }}
+    {% endif %}
   </article>
 {% endmacro %}
