@@ -3,6 +3,8 @@ A Lektor theme based on Pixyll
 
 A simple and elegant theme for using with [Lektor](http://getlektor.com/).
 
+You can find the site demo live [here](http://eswarm.in/piktor)
+
 ![Screen](/screens/screen_md.png?raw=true "Screenshot")
 
 ![Screen](/screens/screen.png?raw=true "Screenshot")
